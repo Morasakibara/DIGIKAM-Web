@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+<!-- SEO Optimizations -->
+<meta name="description" content="DIGIKAM : Startup spécialisée en digitalisation, design, culture digitale et formation. Nous construisons le futur numérique.">
+<link rel="canonical" href="https://www.digikam.africa/">
+
+<!-- Open Graph -->
+<meta property="og:title" content="DIGIKAM - Construisons le futur numérique">
+<meta property="og:description" content="Solutions digitales sur mesure : digitalisation, design, marketing et formations.">
+<meta property="og:image" content="https://www.digikam.africa/cover.jpg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.digikam.africa/">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DIGIKAM - Agence Digitale Innovante">
+<meta name="twitter:description" content="Nous accompagnons les entreprises dans leur transformation numérique.">
+
+<!-- PWA manifest -->
+<link rel="manifest" href="manifest.json">
+<!-- couleur pour la barre d'état (Android/Chrome)-->
+ <meta name="theme-color" content="#4ecdc4">
+
+ <!-- icone PWA -->
+<link rel="icon" type="image/png" sizes="192x192" href="images/Icons/logo192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="images/Icons/logo512.png">
+
+<!-- icone Iphone/Ipad (Apple touch)-->
+ <link rel="apple-touch-icon" href="images/Icons/logo192.png">
+
+<!-- JSON-LD Schema -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Organization",
+ "name": "DIGIKAM",
+ "url": "https://www.digikam.africa",
+ "logo": "https://www.digikam.africa/logo.png",
+ "sameAs": [
+   "https://facebook.com/digikam",
+   "https://www.linkedin.com/company/digikam",
+   "https://www.tiktok.com/@digikam"
+ ],
+ "contactPoint": [{
+   "@type": "ContactPoint",
+   "telephone": "+237 674509721",
+   "contactType": "customer service"
+ }]
+}
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>DIGIKAM - Construisons le futur numérique</title>
+    <link rel="icon" type="image/png" href="images/Logo/fav-icone-site.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style> * { margin: 0; padding: 0; box-sizing: border-box; } :root { --primary: #4ecdc4; --secondary: #3b5998; --dark: #1a1a2e; --light: #f8f9fa; --gradient: linear-gradient(135deg, #4ecdc4 0%, #3b5998 100%); --shadow: 0 10px 40px rgba(0, 0, 0, 0.1); --bg-primary: #ffffff; --bg-secondary: #f8f9fa; --text-primary: #1a1a2e; --text-secondary: #666666; --card-bg: #ffffff; --border-color: #e0e0e0; } [data-theme="dark"] { --primary: #4ecdc4; --secondary: #5a7fc4; --dark: #e8e8e8; --light: #1e1e2e; --shadow: 0 10px 40px rgba(0, 0, 0, 0.4); --bg-primary: #0f0f1e; --bg-secondary: #1a1a2e; --text-primary: #e8e8e8; --text-secondary: #b0b0b0; --card-bg: #1e1e2e; --border-color: #2a2a3e; } body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: var(--text-primary); overflow-x: hidden; background: var(--bg-primary); transition: background 0.3s ease, color 0.3s ease; } header { position: fixed; width: 100%; background: var(--card-bg); backdrop-filter: blur(20px); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08); z-index: 1000; transition: all 0.3s ease; } [data-theme="dark"] header { background: rgba(30, 30, 46, 0.95); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); } header.scrolled { padding: 10px 0; box-shadow: 0 4px 40px rgba(0, 0, 0, 0.15); } nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 50px; max-width: 1400px; margin: 0 auto; } .logo { font-size: 28px; font-weight: 800; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: flex; align-items: center; gap: 10px; } .nav-links { display: flex; list-style: none; gap: 40px; } .nav-links a { color: var(--text-primary); font-weight: 600; transition: all 0.3s; position: relative; text-decoration: none; } .nav-links a::after { content: ''; position: absolute; width: 0; height: 3px; bottom: -5px; left: 0; background: var(--gradient); transition: width 0.3s; } .nav-links a:hover::after { width: 100%; } .menu-toggle { display: none; font-size: 28px; cursor: pointer; color: var(--text-primary); } .theme-toggle { background: var(--gradient); border: none; width: 45px; height: 45px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 20px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(78, 205, 196, 0.3); } .theme-toggle:hover { transform: scale(1.1) rotate(20deg); box-shadow: 0 6px 20px rgba(78, 205, 196, 0.5); } .hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 60px; padding: 120px 50px 80px; max-width: 1400px; margin: 0 auto; position: relative; } .hero::before { content: ''; position: absolute; top: 0; right: 0; width: 50%; height: 100%; background: var(--gradient); opacity: 0.05; border-radius: 0 0 0 200px; z-index: -1; } .hero-content h1 { font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.2; margin-bottom: 25px; color: var(--text-primary); animation: fadeInLeft 1s ease; } .hero-content .gradient-text { background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; } .hero-content p { font-size: 1.3rem; color: var(--text-secondary); margin-bottom: 40px; animation: fadeInLeft 1s 0.2s ease both; } .hero-buttons { display: flex; gap: 20px; flex-wrap: wrap; animation: fadeInLeft 1s 0.4s ease both; } .btn { padding: 18px 45px; border-radius: 50px; font-weight: 700; font-size: 16px; transition: all 0.3s; cursor: pointer; border: none; text-decoration: none; display: inline-block; } .btn-primary { background: var(--gradient); color: white; box-shadow: 0 8px 25px rgba(78, 205, 196, 0.3); } .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 35px rgba(78, 205, 196, 0.4); } .btn-secondary { background: white; color: var(--secondary); border: 2px solid var(--secondary); } .btn-secondary:hover { background: var(--secondary); color: white; } .hero-image { position: relative; animation: fadeInRight 1s ease; } .hero-image img { width: 100%; height: 500px; object-fit: cover; border-radius: 30px; box-shadow: var(--shadow); } @keyframes fadeInLeft { from { opacity: 0; transform: translateX(-50px); } to { opacity: 1; transform: translateX(0); } } @keyframes fadeInRight { from { opacity: 0; transform: translateX(50px); } to { opacity: 1; transform: translateX(0); } } section { padding: 100px 50px; max-width: 1400px; margin: 0 auto; } .section-header { text-align: center; margin-bottom: 70px; } .section-header h2 { font-size: clamp(2.5rem, 4vw, 3.5rem); margin-bottom: 20px; color: var(--text-primary); } .section-header .gradient-text { background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; } .section-header p { font-size: 1.2rem; color: var(--text-secondary); max-width: 700px; margin: 0 auto; } .domaines-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; } .domaine-card { background: var(--card-bg); padding: 40px; border-radius: 25px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08); transition: all 0.4s ease; position: relative; overflow: hidden; } [data-theme="dark"] .domaine-card { box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3); } .domaine-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 5px; background: var(--gradient); transform: scaleX(0); transition: transform 0.4s; } .domaine-card:hover::before { transform: scaleX(1); } .domaine-card:hover { transform: translateY(-10px); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15); } .domaine-icon { width: 100%; height: 200px; border-radius: 20px; overflow: hidden; margin-bottom: 25px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); transition: transform 0.4s ease; } .domaine-icon img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; } .domaine-card:hover .domaine-icon img { transform: scale(1.05); }   .domaine-card h3 { font-size: 1.5rem; color: var(--text-primary); margin-bottom: 15px; } .domaine-card p { color: var(--text-secondary); line-height: 1.8; } #pourquoi { background: var(--bg-secondary); } .pourquoi-content { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; } .pourquoi-image { position: relative; } .pourquoi-image img { width: 100%; height: 500px; object-fit: cover; border-radius: 30px; box-shadow: var(--shadow); } .pourquoi-list { display: flex; flex-direction: column; gap: 30px; } .pourquoi-item { display: flex; align-items: start; gap: 20px; padding: 30px; background: var(--card-bg); border-radius: 20px; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08); transition: all 0.3s; } [data-theme="dark"] .pourquoi-item { box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); } .pourquoi-item:hover { transform: translateX(10px); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12); } .pourquoi-icon { width: 60px; height: 60px; min-width: 60px; background: var(--gradient); border-radius: 15px; display: flex; align-items: center; justify-content: center; font-size: 28px; } .pourquoi-item h3 { color: var(--text-primary); margin-bottom: 8px; font-size: 1.3rem; } .pourquoi-item p { color: var(--text-secondary); } .projets-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; } .projet-card { background: var(--card-bg); border-radius: 25px; overflow: hidden; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08); transition: all 0.4s ease; position: relative; } [data-theme="dark"] .projet-card { box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3); } .projet-card:hover { transform: translateY(-15px); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15); } .projet-image { width: 100%; height: 250px; position: relative; overflow: hidden; background: var(--gradient); } .projet-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; } .projet-card:hover .projet-image img { transform: scale(1.1); } .projet-badge { position: absolute; top: 20px; right: 20px; padding: 8px 20px; border-radius: 50px; font-size: 13px; font-weight: 700; text-transform: uppercase; z-index: 10; } .projet-badge.en-cours { background: #FFA500; color: white; } .projet-badge.termine { background: #25D366; color: white; } .projet-badge.planifie { background: var(--secondary); color: white; } .projet-content { padding: 35px; } .projet-category { display: inline-block; padding: 6px 15px; background: rgba(78, 205, 196, 0.1); color: var(--primary); border-radius: 20px; font-size: 13px; font-weight: 600; margin-bottom: 15px; } .projet-content h3 { font-size: 1.5rem; color: var(--text-primary); margin-bottom: 15px; } .projet-content p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 20px; } .projet-meta { display: flex; justify-content: space-between; align-items: center; padding-top: 20px; border-top: 1px solid var(--border-color); } .projet-client { font-size: 14px; color: #999; } .projet-client strong { color: var(--text-primary); } .projet-progress { display: flex; align-items: center; gap: 10px; } .progress-bar { width: 100px; height: 8px; background: var(--border-color); border-radius: 10px; overflow: hidden; } .progress-fill { height: 100%; background: var(--gradient); border-radius: 10px; transition: width 0.3s ease; } .progress-text { font-size: 14px; font-weight: 700; color: var(--primary); } .stats-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 80px; } .stat-card { text-align: center; padding: 40px; background: var(--card-bg); border-radius: 20px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08); transition: all 0.3s; } [data-theme="dark"] .stat-card { box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3); } .stat-card:hover { transform: translateY(-10px); } .stat-number { font-size: 4rem; font-weight: 800; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 10px; } .stat-label { font-size: 1.1rem; color: var(--text-secondary); font-weight: 600; } .avis-section { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start; } .avis-form-container { background: var(--card-bg); padding: 40px; border-radius: 25px; box-shadow: var(--shadow); position: sticky; top: 100px; } [data-theme="dark"] .avis-form-container { box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4); } .avis-form-container h3 { color: var(--text-primary); margin-bottom: 25px; font-size: 1.8rem; } .rating-input { display: flex; gap: 10px; margin-bottom: 20px; flex-direction: row-reverse; justify-content: flex-end; } .rating-input input { display: none; } .rating-input label { font-size: 35px; cursor: pointer; color: #ddd; transition: all 0.2s; } .rating-input label:hover, .rating-input label:hover ~ label, .rating-input input:checked ~ label { color: #FFD700; transform: scale(1.1); } .avis-list { display: flex; flex-direction: column; gap: 25px; } .avis-card { background: var(--card-bg); padding: 30px; border-radius: 20px; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08); transition: all 0.3s; animation: slideIn 0.5s ease; } [data-theme="dark"] .avis-card { box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); } @keyframes slideIn { from { opacity: 0; transform: translateX(-30px); } to { opacity: 1; transform: translateX(0); } } .avis-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); } .avis-header { display: flex; justify-content: space-between; align-items: start; margin-bottom: 15px; } .avis-author { display: flex; align-items: center; gap: 15px; } .author-avatar { width: 50px; height: 50px; border-radius: 50%; background: var(--gradient); display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 20px; } .author-info h4 { color: var(--text-primary); font-size: 1.1rem; margin-bottom: 3px; } .author-info .date { color: var(--text-secondary); font-size: 0.85rem; } .avis-rating { display: flex; gap: 3px; } .avis-rating i { color: #FFD700; font-size: 16px; } .avis-text { color: var(--text-secondary); line-height: 1.8; margin-top: 15px; } .no-avis { text-align: center; padding: 60px 20px; color: var(--text-secondary); } .no-avis i { font-size: 60px; color: var(--primary); margin-bottom: 20px; } .partners-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 30px; align-items: center; } .partner-logo { height: 80px; background: var(--card-bg); border-radius: 15px; padding: 20px; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08); display: flex; align-items: center; justify-content: center; transition: all 0.3s; } [data-theme="dark"] .partner-logo { box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); } .partner-logo:hover { transform: scale(1.05); } .partner-logo img { width: 100%; height: 100%; object-fit: contain; } .partner-logo::before { content: 'LOGO'; color: #ddd; font-weight: 700; font-size: 14px; } #contact { background: var(--bg-secondary); } .contact-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; } .contact-info { display: flex; flex-direction: column; gap: 30px; } .contact-item { display: flex; align-items: center; gap: 20px; padding: 25px; background: var(--card-bg); border-radius: 15px; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08); transition: all 0.3s; text-decoration: none; color: inherit; } [data-theme="dark"] .contact-item { box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); } .contact-item:hover { transform: translateX(10px); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12); } .contact-icon { width: 60px; height: 60px; min-width: 60px; border-radius: 15px; display: flex; align-items: center; justify-content: center; font-size: 24px; color: white; } .contact-icon.whatsapp { background: #25D366; } .contact-icon.email { background: #EA4335; } .contact-icon.facebook { background: #1877F2; } .contact-icon.linkedin { background: #0A66C2; } .contact-icon.tiktok { background: #000; } .contact-details h3 { font-size: 1.1rem; color: var(--text-primary); margin-bottom: 5px; } .contact-details p { color: var(--text-secondary); } .contact-form { background: var(--card-bg); padding: 50px; border-radius: 30px; box-shadow: var(--shadow); } [data-theme="dark"] .contact-form { box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4); } .form-group { margin-bottom: 25px; } .form-group label { display: block; margin-bottom: 10px; font-weight: 600; color: var(--text-primary); } .form-group input, .form-group textarea { width: 100%; padding: 18px; border: 2px solid var(--border-color); border-radius: 15px; font-family: inherit; font-size: 16px; transition: all 0.3s; background: var(--bg-primary); color: var(--text-primary); } .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(78, 205, 196, 0.1); } .form-group textarea { min-height: 150px; resize: vertical; } footer { background: var(--dark); color: white; padding: 60px 50px 30px; } .footer-content { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px; margin-bottom: 40px; } .footer-about h3 { font-size: 2rem; margin-bottom: 20px; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; } .footer-about p { line-height: 1.8; color: #aaa; } .footer-links h4 { margin-bottom: 20px; color: var(--primary); } .footer-links ul { list-style: none; } .footer-links ul li { margin-bottom: 12px; } .footer-links a { color: #aaa; transition: color 0.3s; text-decoration: none; } .footer-links a:hover { color: var(--primary); } .social-links { display: flex; gap: 15px; margin-top: 20px; } .social-links a { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; transition: all 0.3s; text-decoration: none; } .social-links a.facebook { background: #1877F2; color: white; } .social-links a.linkedin { background: #0A66C2; color: white; } .social-links a.tiktok { background: #000; color: white; } .social-links a:hover { transform: translateY(-5px) scale(1.1); } .footer-bottom { text-align: center; padding-top: 30px; border-top: 1px solid rgba(255, 255, 255, 0.1); color: #aaa; } @media (max-width: 1024px) { .hero, .pourquoi-content, .contact-wrapper { grid-template-columns: 1fr; } .hero-image, .pourquoi-image { order: -1; } .footer-content { grid-template-columns: 1fr; gap: 40px; } } @media (max-width: 480px) { .hero-content h1 { font-size: 2rem; } } @media (max-width: 768px) { .hero-content { text-align: center; } nav { padding: 20px; } .theme-toggle { width: 40px; height: 40px; font-size: 18px; } .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--card-bg); flex-direction: column; gap: 0; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); } .nav-links.active { display: flex; } .nav-links li { border-bottom: 1px solid var(--border-color); } .nav-links a { display: block; padding: 20px; } .menu-toggle { display: block; } section { padding: 60px 20px; } .hero { padding: 100px 20px 60px; } .hero-buttons { flex-direction: column; } .btn { width: 100%; text-align: center; } .contact-form { padding: 30px 20px; } .avis-section { grid-template-columns: 1fr; } .avis-form-container { position: relative; top: 0; padding: 30px 20px; } } </style>
+</head>
+<body>
+    <header id="header">
+        <nav>
+            <div class="logo">
+                
+                <img src="images/Logo/site-digikam.png" alt="digikam">
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#domaines">Domaines</a></li>
+                <li><a href="#pourquoi">Pourquoi</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#succes">Succès</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon" id="themeIcon"></i>
+                </button>
+                <div class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="accueil" class="hero">
+        <div class="hero-content">
+            <h1>Nous construisons le <span class="gradient-text">futur numérique</span></h1>
+            <p>Transformez votre entreprise avec des solutions digitales innovantes et un accompagnement personnalisé</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">Travaillons ensemble</a>
+                <a href="#domaines" class="btn btn-secondary">Nos services</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <!-- INSTRUCTIONS: Remplacez src par le chemin de votre image -->
+            <img src="images/futur.jpg" alt="DIGIKAM - Transformation digitale" onerror="this.style.display='none'">
+        </div>
+    </section>
+
+    <section id="domaines">
+        <div class="section-header">
+            <h2>Nos <span class="gradient-text">Domaines d'Expertise</span></h2>
+            <p>Des solutions complètes pour accompagner votre transformation digitale</p>
+        </div>
+        <div class="domaines-grid">
+    <div class="domaine-card">
+        <div class="domaine-icon">
+            <img src="images/107026.jpg" alt="Digitalisation d'entreprise">
+        </div>
+        <h3>Digitalisation d'entreprise</h3>
+        <p>Trop d’entreprises au Cameroun perdent du temps et de l’argent à cause de méthodes manuelles dépassées.  
+        Chez DIGIKAM, nous vous aidons à franchir le cap du digital avec :  
+        <ul>
+            <li>Sites web vitrines et professionnels </li>
+            <li>Sites web vitrines et professionnels</li>
+            <li>Applications web et logiciels métiers</li>
+            <li>Installation de réseaux informatiques performants</li>
+        </ul>
+        <p> Optimisez vos processus, gagnez en efficacité. Contactez-nous dès maintenant.
+</p>
+
+
+</p>
+    </div>
+
+    <div class="domaine-card">
+        <div class="domaine-icon">
+            <img src="images/2148190722.jpg" alt="Culture du digital">
+        </div>
+        <h3>Community Management</h3>
+        <p>Être présent sur les réseaux ne suffit plus, il faut être stratégique.  
+        Nous gérons vos comptes Facebook, Instagram, TikTok de façon professionnelle :
+        <ul>
+            <li>Création de contenu </li>
+            <li>Animation & planification </li>
+            <li>Analyse des résultats</li>
+        </ul>  
+        </p>
+        <p>Confiez-nous votre image digitale et concentrez-vous sur votre activité.</p>
+    </div>
+
+    <div class="domaine-card">
+        <div class="domaine-icon">
+            <img src="images/marketin.jpg" alt="Design et communication">
+        </div>
+        <h3>Design & Communication</h3>
+        <p>Votre image parle avant vous.  
+            Nous créons des supports visuels qui marquent :  
+            <ul>
+                <li>Flyers, cartes, calendriers, roll-up, spots, shooting  </li>
+                <li>Couverture d’événements professionnels</li>
+            </ul>
+        </p>
+        <p>Faites bonne impression dès le premier regard.</p>
+    </div>
+
+    <div class="domaine-card">
+        <div class="domaine-icon">
+            <img src="images/formation.jpg" alt="Formation et accompagnement">
+        </div>
+        <h3>Formation et accompagnement</h3>
+        <p>Maîtriser le digital est devenu indispensable.
+            Nous formons et accompagnons étudiants, jeunes et entreprises avec :  
+            <ul>
+                <li>Ateliers pratiques</li>
+                <li>Ateliers pratiques </li>
+                <li>Formations personnalisées</li>
+                <li>Accompagnement stratégique</li>
+
+            </ul>
+        </p>
+        <p>Rejoignez nos sessions et boostez vos compétences digitales.</p>
+    </div>
+</div>
+
+    </section>
+
+    <section id="pourquoi">
+        <div class="section-header">
+            <h2>Pourquoi choisir <span class="gradient-text">DIGIKAM</span> ?</h2>
+            <p>Des raisons concrètes de nous faire confiance</p>
+        </div>
+        <div class="pourquoi-content">
+            <div class="pourquoi-image">
+                <!-- INSTRUCTIONS: Remplacez src par le chemin de votre image -->
+                <img src="images/Pourquoi.jpg" alt="Équipe DIGIKAM" onerror="this.style.display='none'">
+            </div>
+            <div class="pourquoi-list">
+                <div class="pourquoi-item">
+                    <div class="pourquoi-icon">🎯</div>
+                    <div>
+                        <h3>Solutions sur mesure</h3>
+                        <p>Chaque projet est unique, nos solutions aussi. Nous créons des stratégies adaptées à vos objectifs spécifiques.</p>
+                    </div>
+                </div>
+                <div class="pourquoi-item">
+                    <div class="pourquoi-icon">🌍</div>
+                    <div>
+                        <h3>Expertise locale</h3>
+                        <p>Une connaissance approfondie du marché local et des spécificités culturelles pour des solutions pertinentes.</p>
+                    </div>
+                </div>
+                <div class="pourquoi-item">
+                    <div class="pourquoi-icon">🚀</div>
+                    <div>
+                        <h3>Innovation constante</h3>
+                        <p>Toujours à la pointe de la technologie pour vous offrir les solutions les plus performantes du marché.</p>
+                    </div>
+                </div>
+                <div class="pourquoi-item">
+                    <div class="pourquoi-icon">🤝</div>
+                    <div>
+                        <h3>Accompagnement humain</h3>
+                        <p>Une équipe passionnée et dévouée qui vous accompagne à chaque étape de votre transformation digitale.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projets">
+        <div class="section-header">
+            <h2>Nos <span class="gradient-text">Projets</span></h2>
+            <p>Découvrez nos réalisations et projets en cours</p>
+        </div>
+
+        <div class="projets-grid">
+            <!-- Projet 1 - EN COURS -->
+            <div class="projet-card">
+                <div class="projet-image">
+                    <span class="projet-badge en-cours">En cours</span>
+                    <!-- INSTRUCTIONS: Remplacez src par l'image de votre projet -->
+                    <img src="images/projet-1.jpg" alt="Projet 1" onerror="this.style.display='none'">
+                </div>
+                <div class="projet-content">
+                    <span class="projet-category">💡 Digitalisation</span>
+                    <h3>Application web de gestion studios photo</h3>
+                    <p>Développement d'une application web pour la gestion des clients et des differents services offerts par un studio photos professionnel.</p>
+                    <div class="projet-meta">
+                        <div class="projet-client">
+                            <strong>Client:</strong> Entreprise HD PRO
+                        </div>
+                        <div class="projet-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 75%"></div>
+                            </div>
+                            <span class="progress-text">75%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projet 2 - EN COURS -->
+            <div class="projet-card">
+                <div class="projet-image">
+                    <span class="projet-badge en-cours">En cours</span>
+                    <!-- INSTRUCTIONS: Remplacez src par l'image de votre projet -->
+                    <img src="images/projet-2.jpg" alt="Projet 2" onerror="this.style.display='none'">
+                </div>
+                <div class="projet-content">
+                    <span class="projet-category">💡 Digitalisation</span>
+                    <h3>Rénovation de site web</h3>
+                    <p>Rénovation du site web de l'institut supérieur HINTEL </p>
+                    <div class="projet-meta">
+                        <div class="projet-client">
+                            <strong>Client:</strong> IS HINTEL
+                        </div>
+                        <div class="projet-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 60%"></div>
+                            </div>
+                            <span class="progress-text">60%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projet 3 - EN COURS -->
+            <div class="projet-card">
+                <div class="projet-image">
+                    <span class="projet-badge en-cours">En cours</span>
+                    <!-- INSTRUCTIONS: Remplacez src par l'image de votre projet -->
+                    <img src="images/projet-3.jpg" alt="Projet 3" onerror="this.style.display='none'">
+                </div>
+                <div class="projet-content">
+                    <span class="projet-category">💡 Digitalisation</span>
+                    <h3>Conception de site web accademique</h3>
+                    <p>Mise en place d'un site web pour une institut universitaire dans le but de garantir l'acces aux informations de l'établissement en question</p>
+                    <div class="projet-meta">
+                        <div class="projet-client">
+                            <strong>Client:</strong> ISTBER
+                        </div>
+                        <div class="projet-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 40%"></div>
+                            </div>
+                            <span class="progress-text">40%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projet 4 - PLANIFIÉ -->
+             <div class="projet-card">
+                <div class="projet-image">
+                    <span class="projet-badge planifie">Planifié</span>
+                    <!-- INSTRUCTIONS: Remplacez src par l'image de votre projet -->
+                    <img src="images/projet-4.jpg" alt="Projet 4" onerror="this.style.display='none'">
+                </div>
+                <div class="projet-content">
+                    <span class="projet-category">🧠 Culture digitale</span>
+                    <h3>Stratégie digitale globale</h3>
+                    <p>Élaboration d'une stratégie digitale complète pour optimiser la présence en ligne et développer la culture numérique.</p>
+                    <div class="projet-meta">
+                        <div class="projet-client">
+                            <strong>Client:</strong> Internotes
+                        </div>
+                        <div class="projet-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 15%"></div>
+                            </div>
+                            <span class="progress-text">15%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projet 5 - TERMINÉ -->
+            <div class="projet-card">
+                <div class="projet-image">
+                    <span class="projet-badge termine">Terminé</span>
+                    <!-- INSTRUCTIONS: Remplacez src par l'image de votre projet -->
+                    <img src="images/projet-5.jpg" alt="Projet 5" onerror="this.style.display='none'">
+                </div>
+                <div class="projet-content">
+                    <span class="projet-category">💡 Digitalisation</span>
+                    <h3>Application mobile événementielle</h3>
+                    <p>Développement d'une application mobile pour la gestion d'événements avec billetterie et programme interactif.</p>
+                    <div class="projet-meta">
+                        <div class="projet-client">
+                            <strong>Client:</strong> DiGIKAM
+                        </div>
+                        <div class="projet-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 100%"></div>
+                            </div>
+                            <span class="progress-text">100%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projet 6 - TERMINÉ -->
+            <div class="projet-card">
+                <div class="projet-image">
+                    <span class="projet-badge termine">Terminé</span>
+                    <!-- INSTRUCTIONS: Remplacez src par l'image de votre projet -->
+                    <img src="images/projet-6.jpg" alt="Projet 6" onerror="this.style.display='none'">
+                </div>
+                <div class="projet-content">
+                    <span class="projet-category">🎨 Design</span>
+                    <h3>Site web vitrine premium</h3>
+                    <p>Conception et développement d'un site web moderne avec animations avancées et optimisation SEO complète.</p>
+                    <div class="projet-meta">
+                        <div class="projet-client">
+                            <strong>Client:</strong> DIGIKAM
+                        </div>
+                        <div class="projet-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 100%"></div>
+                            </div>
+                            <span class="progress-text">100%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Projet 7 - TERMINÉ -->
+            <div class="projet-card">
+                <div class="projet-image">
+                    <span class="projet-badge termine">Terminé</span>
+                    <!-- INSTRUCTIONS: Remplacez src par l'image de votre projet -->
+                    <img src="images/projet-7.jpg" alt="Projet 6" onerror="this.style.display='none'">
+                </div>
+                <div class="projet-content">
+                    <span class="projet-category">🎨 Design</span>
+                    <h3>Application Web de gestion de présence</h3>
+                    <p>Conception d'une application de gestion de présence moderne responsive avec LARAVEL. </p>
+                    <div class="projet-meta">
+                        <div class="projet-client">
+                            <strong>Client:</strong> DIGIKAM
+                        </div>
+                        <div class="projet-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 100%"></div>
+                            </div>
+                            <span class="progress-text">100%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="succes">
+        <div class="section-header">
+            <h2>Nos <span class="gradient-text">Succès</span></h2>
+            <p>Des chiffres qui parlent d'eux-mêmes</p>
+        </div>
+        
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-number">5+</div>
+                <div class="stat-label">Projets réalisés</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">3+</div>
+                <div class="stat-label">Clients satisfaits</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">5+</div>
+                <div class="stat-label">Partenaires</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">95%</div>
+                <div class="stat-label">Taux de satisfaction</div>
+            </div>
+        </div>
+
+        <div class="section-header" style="margin-top: 80px;">
+            <h3>Avis de nos clients</h3>
+            <p>Découvrez les témoignages de ceux qui nous font confiance</p>
+        </div>
+
+        <div class="avis-section">
+            <div class="avis-form-container">
+                <h3>✍️ Laissez votre avis</h3>
+                <form id="avisForm">
+                    <div class="form-group">
+                        <label>Votre note *</label>
+                        <div class="rating-input">
+                            <input type="radio" name="rating" value="5" id="star5" required>
+                            <label for="star5">⭐</label>
+                            <input type="radio" name="rating" value="4" id="star4">
+                            <label for="star4">⭐</label>
+                            <input type="radio" name="rating" value="3" id="star3">
+                            <label for="star3">⭐</label>
+                            <input type="radio" name="rating" value="2" id="star2">
+                            <label for="star2">⭐</label>
+                            <input type="radio" name="rating" value="1" id="star1">
+                            <label for="star1">⭐</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="avisName">Votre nom *</label>
+                        <input type="text" id="avisName" name="name" required placeholder="Jean Dupont">
+                    </div>
+                    <div class="form-group">
+                        <label for="avisComment">Votre commentaire *</label>
+                        <textarea id="avisComment" name="comment" required placeholder="Partagez votre expérience avec DIGIKAM..." style="min-height: 120px;"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">
+                        <i class="fas fa-paper-plane"></i> Publier mon avis
+                    </button>
+                </form>
+            </div>
+
+            <div class="avis-list" id="avisList">
+                <div class="no-avis">
+                    <i class="fas fa-comments"></i>
+                    <p>Soyez le premier à laisser un avis !</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-header" style="margin-top: 60px;">
+            <h3>Ils nous font confiance</h3>
+        </div>
+        <div class="partners-grid">
+            <!-- INSTRUCTIONS: Ajoutez vos logos partenaires ici -->
+            <div class="partner-logo">
+                <img src="images/Logo-partenaire/logo-partenaire-1.png" alt="Partenaire 1" onerror="this.style.display='none'">
+            </div>
+            <div class="partner-logo">
+                <img src="images/Logo-partenaires/logo-partenaire-2.png" alt="Partenaire 2" onerror="this.style.display='none'">
+            </div>
+            <div class="partner-logo">
+                <img src="images/Logo-partenaires/logo-partenaire-3.png" alt="Partenaire 3" onerror="this.style.display='none'">
+            </div>
+            <div class="partner-logo">
+                <img src="images/Logo-partenaires/logo-partenaire-4.png" alt="Partenaire 4" onerror="this.style.display='none'">
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="section-header">
+            <h2>Contactez <span class="gradient-text">nous</span></h2>
+            <p>Prêt à démarrer votre transformation digitale ?</p>
+        </div>
+
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <a href="https://wa.me/674509721" target="_blank" class="contact-item">
+                    <div class="contact-icon whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>WhatsApp</h3>
+                        <p>Contactez-nous directement</p>
+                    </div>
+                </a>
+
+                <a href="mailto:digikam237@gmail.com" class="contact-item">
+                    <div class="contact-icon email">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Email</h3>
+                        <p>digikam237@gmail.com</p>
+                    </div>
+                </a>
+
+                <a href="https://www.facebook.com/profile.php?id=61583341243524" target="_blank" class="contact-item">
+                    <div class="contact-icon facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Facebook</h3>
+                        <p>Suivez-nous sur Facebook</p>
+                    </div>
+                </a>
+
+                <a href="https://linkedin.com/company/VOTRE_ENTREPRISE" target="_blank" class="contact-item">
+                    <div class="contact-icon linkedin">
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>LinkedIn</h3>
+                        <p>Réseau professionnel</p>
+                    </div>
+                </a>
+
+                <a href="https://www.tiktok.com/@digikam4?_r=1&_t=ZM-91L1mgyoyuR" target="_blank" class="contact-item">
+                    <div class="contact-icon tiktok">
+                        <i class="fab fa-tiktok"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>TikTok</h3>
+                        <p>Découvrez nos vidéos</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="contact-form">
+                <h3 style="margin-bottom: 30px; color: var(--dark);">Prendre rendez-vous</h3>
+                <form id="contactForm"  action="https://formspree.io/f/mqawgadp" method="POST">
+                    <div class="form-group">
+                        <label for="name">Nom complet *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Téléphone</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Votre message *</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">
+                        <i class="fas fa-paper-plane"></i> Envoyer le message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+             <div class="footer-about">
+                <h3>DIGIKAM</h3>
+                <p>"Le digital transforme des idées en réalités"</p>
+                <p style="margin-top: 20px;">Nous sommes une startup innovante spécialisée dans la transformation digitale des entreprises. Notre mission : construire ensemble le futur numérique.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=61583341243524" target="_blank" class="facebook" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://linkedin.com/company/VOTRE_ENTREPRISE" target="_blank" class="linkedin" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@digikam4?_r=1&_t=ZM-91L1mgyoyuR" target="_blank" class="tiktok" aria-label="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#domaines">Nos Domaines</a></li>
+                    <li><a href="#pourquoi">Pourquoi DIGIKAM</a></li>
+                    <li><a href="#projets">Nos Projets</a></li>
+                    <li><a href="#succes">Nos Succès</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#domaines">Digitalisation</a></li>
+                    <li><a href="#domaines">Culture digitale</a></li>
+                    <li><a href="#domaines">Design</a></li>
+                    <li><a href="#domaines">Formation</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 DIGIKAM. Tous droits réservés. | Développé avec passion</p>
+        </div>
+    </footer>
+
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        const htmlElement = document.documentElement;
+
+        // Charger le thème sauvegardé
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        htmlElement.setAttribute('data-theme', savedTheme);
+        updateThemeIcon(savedTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            
+            htmlElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        });
+
+        function updateThemeIcon(theme) {
+            if (theme === 'dark') {
+                themeIcon.className = 'fas fa-sun';
+            } else {
+                themeIcon.className = 'fas fa-moon';
+            }
+        }
+
+        // Système d'avis clients
+        let avisData = JSON.parse(localStorage.getItem('digikamAvis')) || [];
+
+        function displayAvis() {
+            const avisList = document.getElementById('avisList');
+            
+            if (avisData.length === 0) {
+                avisList.innerHTML = `
+                    <div class="no-avis">
+                        <i class="fas fa-comments"></i>
+                        <p>Soyez le premier à laisser un avis !</p>
+                    </div>
+                `;
+                return;
+            }
+
+            avisList.innerHTML = avisData.map(avis => {
+                const stars = '⭐'.repeat(avis.rating);
+                const initials = avis.name.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2);
+                
+                return `
+                    <div class="avis-card">
+                        <div class="avis-header">
+                            <div class="avis-author">
+                                <div class="author-avatar">${initials}</div>
+                                <div class="author-info">
+                                    <h4>${avis.name}</h4>
+                                    <span class="date">${avis.date}</span>
+                                </div>
+                            </div>
+                            <div class="avis-rating">
+                                ${stars}
+                            </div>
+                        </div>
+                        <p class="avis-text">${avis.comment}</p>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Afficher les avis au chargement
+        displayAvis();
+
+        // Formulaire d'avis
+        const avisForm = document.getElementById('avisForm');
+        avisForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const rating = document.querySelector('input[name="rating"]:checked');
+            const name = document.getElementById('avisName').value;
+            const comment = document.getElementById('avisComment').value;
+
+            if (!rating) {
+                alert('Veuillez sélectionner une note');
+                return;
+            }
+
+            const newAvis = {
+                id: Date.now(),
+                rating: parseInt(rating.value),
+                name: name,
+                comment: comment,
+                date: new Date().toLocaleDateString('fr-FR', { 
+                    year: 'numeric', 
+                    month: 'long', 
+                    day: 'numeric' 
+                })
+            };
+
+            // Ajouter au début du tableau
+            avisData.unshift(newAvis);
+            
+            // Sauvegarder dans localStorage
+            localStorage.setItem('digikamAvis', JSON.stringify(avisData));
+            
+            // Réafficher les avis
+            displayAvis();
+            
+            // Réinitialiser le formulaire
+            this.reset();
+            
+            // Message de succès
+            const button = this.querySelector('button');
+            const originalText = button.innerHTML;
+            button.innerHTML = '<i class="fas fa-check"></i> Avis publié avec succès !';
+            button.style.background = '#25D366';
+            
+            setTimeout(() => {
+                button.innerHTML = originalText;
+                button.style.background = '';
+            }, 3000);
+
+            // Scroll vers les avis
+            document.getElementById('avisList').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        });
+
+        // Menu toggle pour mobile
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = menuToggle.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        // Fermer le menu lors du clic sur un lien
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                const icon = menuToggle.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            });
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerOffset = 80;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Header effect au scroll
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Form submission
+        const contactForm = document.getElementById("contactForm").addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    const button = this.querySelector("button");
+    const originalText = button.innerHTML;
+
+    button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi...';
+
+    const formData = new FormData(this);
+
+    const response = await fetch(this.action, {
+        method: "POST",
+        body: formData,
+        headers: { "Accept": "application/json" }
+    });
+
+    if (response.ok) {
+        button.innerHTML = '<i class="fas fa-check"></i> Message envoyé !';
+        button.style.background = '#25D366';
+        this.reset();
+
+        setTimeout(() => {
+            button.innerHTML = originalText;
+            button.style.background = '';
+        }, 3000);
+    } else {
+        alert("Erreur lors de l’envoi du message !");
+        button.innerHTML = originalText;
+    }
+});
+
+
+        // Animation au scroll pour les éléments
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Appliquer l'animation aux cartes
+        document.querySelectorAll('.domaine-card, .stat-card, .pourquoi-item, .projet-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

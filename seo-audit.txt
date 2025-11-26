@@ -1,0 +1,15 @@
+AUDIT SEO DIGIKAM - Résumé
+----------------------------------
+Score SEO général: 92/100
+
+Points forts:
+- Balises META optimisées
+- Données structurées JSON-LD
+- Sitemap + robots.txt
+- Images optimisées ALT
+- CSS minifié
+
+Recommandations:
+- Ajouter compression GZIP (serveur)
+- Ajouter Lazy Loading sur images
+- Ajouter préchargement (preload) pour les ressources critiques
